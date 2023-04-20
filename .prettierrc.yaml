@@ -1,7 +1,7 @@
-semi: false
-trailingComma: "all"
-bracketSpacing: true
-bracketSameLine: false
-arrowParens: "avoid"
-endOfLine: "auto"
-singleQuote: true
+semi: false #不要分号结尾
+trailingComma: 'all' #是否在可能的多行中输入尾逗号：在有可能的地方都添加
+bracketSpacing: true #对象左右两侧需要空格
+bracketSameLine: true #尖括号不单独成一行
+arrowParens: 'avoid' #单参数的箭头函数参数不需要括号
+endOfLine: 'auto' #行尾换行样式
+singleQuote: true #使用单引号

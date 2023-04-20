@@ -1,11 +1,12 @@
+root: true
+env:
+  node: true
 parser: 'vue-eslint-parser'
 parserOptions:
   parser: '@typescript-eslint/parser'
-  ecmaVersion: 2020
+  ecmaVersion: 'latest'
   sourceType: 'module'
-  ecmaFeatures: {
-    jsx: true
-  }
+  ecmaFeatures: { jsx: true }
 extends:
   - 'plugin:vue/vue3-essential'
   - 'plugin:vue/vue3-recommended'
@@ -14,5 +15,7 @@ extends:
   - 'prettier'
   - 'plugin:prettier/recommended'
 rules: {
-  'quotes': [ 'error', 'single' ]
-}
+    'vue/multi-word-component-names': 'off',
+    'no-var': 'error', #	要求使用 let 或 const 而不是 var
+    'vue/html-indent': [2],
+  }
