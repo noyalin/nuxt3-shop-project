@@ -1,9 +1,9 @@
 import { useMenuStore } from '~/stores'
 
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(to => {
   const store = useMenuStore()
   const routeName = to.name || ''
   store.setCurrentMenu(routeName)
-  console.log('middleware route from:', to)
-  console.log('middleware route to:', from)
+  // console.log('middleware route from:', to)
+  // console.log('middleware route to:', from)
 })
