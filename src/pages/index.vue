@@ -1,12 +1,22 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div><NuxtLink to="/list">list</NuxtLink></div>
+  <div>
+    <a-row>
+      <a-col :span="12">
+        <a-statistic
+          title="Active Users"
+          :value="112893"
+          style="margin-right: 50px" />
+      </a-col>
+      <a-col :span="12">
+        <a-statistic
+          title="Account Balance (CNY)"
+          :precision="2"
+          :value="112893" />
+      </a-col>
+    </a-row>
+  </div>
 </template>
 
-<style lang="scss">
-body {
-  background-color: $bgColor;
-  color: $theme;
-}
-</style>
+<style scoped></style>
