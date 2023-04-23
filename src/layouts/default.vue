@@ -49,6 +49,8 @@ const collapsed = ref<boolean>(false)
         }">
         <slot></slot>
       </a-layout-content>
+
+      <Loading></Loading>
     </a-layout>
   </div>
 </template>

@@ -18,5 +18,11 @@ rules: {
     'vue/multi-word-component-names': 'off',
     'no-var': 'error', #	要求使用 let 或 const 而不是 var
     'vue/html-indent': [2],
-    'indent': [ 'error', 2 ], 
+    'indent': [
+      2,
+      2,
+      {
+        SwitchCase: 1, #默认：0）指定 switch-case 语句的缩进级别
+      },
+    ], 
   }

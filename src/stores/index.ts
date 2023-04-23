@@ -18,6 +18,19 @@ const MENU_LIST = [
   },
 ]
 
+export const useGlabalStore = defineStore('loadingInfo', () => {
+  const isFullLoading = ref<boolean>(false)
+
+  function setFullLoading(value: boolean) {
+    isFullLoading.value = value
+  }
+
+  return {
+    isFullLoading,
+    setFullLoading,
+  }
+})
+
 export const useUserStore = defineStore('userInfo', () => {
   const userInfo = reactive(USER_INFO)
   const menuList = reactive(MENU_LIST)

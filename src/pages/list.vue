@@ -1,8 +1,18 @@
 <script setup lang="ts">
+import { api } from '~/apis/index'
+
 interface Query {
   value?: ''
 }
 const query: Query = reactive({})
+
+const search = async () => {
+  const data = await useHttp.post(api.common.getInfo, {
+    id: 1,
+    fileName: '888',
+  })
+  console.log(data)
+}
 
 const dataSource = [
   {
@@ -44,7 +54,9 @@ const columns = [
       <a-col :span="8">
         <a-input v-model:value="query.value" placeholder="name" />
       </a-col>
-      <a-col :span="8" c><a-button type="primary">搜索</a-button></a-col>
+      <a-col :span="8">
+        <a-button type="primary" @click="search">搜索</a-button>
+      </a-col>
     </a-row>
 
     <a-row>

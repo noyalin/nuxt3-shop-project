@@ -14,4 +14,12 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/noya/nuxt3/',
   },
+  nitro: {
+    devProxy: {
+      '/mock': {
+        target: 'http://localhost:7300',
+        changeOrigin: true,
+      },
+    },
+  },
 })
