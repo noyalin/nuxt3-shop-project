@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
+  // buildDir: 'dist',
   modules: ['@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/tailwindcss'],
   vite: {
     css: {
@@ -21,5 +22,8 @@ export default defineNuxtConfig({
         changeOrigin: true,
       },
     },
+  },
+  devServer: {
+    port: 3008,
   },
 })
