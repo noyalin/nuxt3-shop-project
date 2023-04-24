@@ -11,7 +11,6 @@ const search = async () => {
     id: 1,
     fileName: '888',
   })
-  console.log(data)
 }
 
 const dataSource = [
