@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: '/noya/nuxt3/',
+    // baseURL: '/noya/nuxt3/',
   },
   nitro: {
     devProxy: {
