@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { api } from '~/apis/index'
 
+const runtimeConfig = useRuntimeConfig()
+console.log(runtimeConfig, 123, import.meta.env)
+
 interface Query {
   value?: ''
 }
@@ -11,6 +14,7 @@ const search = async () => {
     id: 1,
     fileName: '888',
   })
+  console.log(data)
 }
 
 const dataSource = [
